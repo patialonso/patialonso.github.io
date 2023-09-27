@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!---utf-8 is unicode encoding used in websites--->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1">
+    <title>
+        Horse Creek Cabins
+    </title>
+    <!---links the html document to the css style-->
+    <link rel="stylesheet" href="style.css">
+    <!--links to google's fonts. Can choose fonts and create link from Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <!---links to a website with free icons. Google search font awesome icons-->
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="icon" href="images/hcclogo.jpg">
+
+</head>
+
+<body>
+    <section class="smallheader">
+        <nav>
+            <a href="index.html"><img src="images/horsecreekcabins1.jpg"></a>
+            <div class="nav-links" id="navLinks">
+                <! This is the closing icon for mobile>
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="cabins.html">CABINS AND RV PARKING</a></li>
+                    <li><a href="nearbyattractions.html">NEARBY ATTRACTIONS</a></li>
+                    <li><a href="dining-and-shopping.html">DINING AND SHOPPING</a></li>
+                    <li><a href="PhotoGallery.html">PHOTO GALLERY</a></li>
+                    <li class="dropdown">
+                        <!input type="checkbox" class="dropdown-toggle">
+                        <a href="#" class="dropbtn">EVENTS <i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Events.html">Upcoming</a></li>
+                            <li><a href="Past.html">Past</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+    </section>
+    <!---welcome-->
+
+    <section class="welcome" style="color: white;">
+
+        <div class="row">
+            <div class="welcome-col">
+
+
+                <h1>Different options</h1>
+            </div>
+        </div>
+    </section>
+    <!-----Dividing into parts-->
+    <style>
+        .table-container {
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto; /* Esto centra horizontalmente la tabla */
+        }
+
+            table td {
+                text-align: center; /* Esto centra el texto dentro de las celdas */
+            }
+        @media screen and (max-width: 600px) {
+            table {
+                width: 100%; /* Make the table take up the full width */
+            }
+
+                table tr {
+                    display: block; /* Stack table rows vertically */
+                }
+
+                table td, table th {
+                    display: block; /* Display table cells as blocks */
+                    width: 100%; /* Take up the full width of the container */
+                    box-sizing: border-box; /* Include padding and border in the width */
+                    text-align: center; /* Left-align text in cells */
+                    margin-bottom: 10px; /* Add some spacing between rows */
+                }
+        }
+    </style>
+    <table border="0" cellspacing="10" cellpadding="0" style="width: 100%">
+        <tr>
+            <td>
+                <a href="airbnb.com/h/horsecreekcabins">
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container" id="slideshow1">
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="images/image1.jpg" style="width:350px">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="images/image2.jpg" style="width:350px">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="images/image3.jpg" style="width:350px">
+                        </div>
+                    </div>
+                    <br>
+
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1, 'slideshow1')"></span>
+                        <span class="dot" onclick="currentSlide(2, 'slideshow1')"></span>
+                        <span class="dot" onclick="currentSlide(3, 'slideshow1')"></span>
+                    </div>
+                </a>
+
+                <!-- Include the JavaScript code specific to this slideshow -->
+                <script>let slideIndex1 = 1;
+                    showSlides(slideIndex1, 'slideshow1');
+
+                    // Next/previous controls
+                    function plusSlides(n, slideshowId) {
+                        showSlides((slideIndex1 += n), slideshowId);
+                    }
+
+                    // Thumbnail image controls
+                    function currentSlide(n, slideshowId) {
+                        showSlides((slideIndex1 = n), slideshowId);
+                    }
+
+                    function showSlides(n, slideshowId) {
+                        let i;
+                        let slides = document.querySelectorAll(`#${slideshowId} .mySlides`);
+                        let dots = document.querySelectorAll(`#${slideshowId} .dot`);
+                        if (n > slides.length) {
+                            slideIndex1 = 1;
+                        }
+                        if (n < 1) {
+                            slideIndex1 = slides.length;
+                        }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex1 - 1].style.display = "block";
+                        dots[slideIndex1 - 1].className += " active";
+                    }</script>
+                <a href="https://airbnb.com/h/horsecreekcabins">
+                    <div class="locations-col">
+                        <h2 style="color: #C07860;">Horse Creek Cabins</h2>
+                        <h3 style="color: #C07860;">4 guests, 1 bedroom, 3 beds, 1 bathroom</h3>
+                        <div class="layer"></div>
+                    </div>
+                </a>
+            </td>
+            <td>
+               
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container" id="slideshow2">
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="images/image4.jpg" style="width:350px">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="images/image5.jpg" style="width:350px">
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="images/image6.jpg" style="width:350px">
+                        </div>
+                    </div>
+                    <br>
+
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1, 'slideshow2')"></span>
+                        <span class="dot" onclick="currentSlide(2, 'slideshow2')"></span>
+                        <span class="dot" onclick="currentSlide(3, 'slideshow2')"></span>
+                    </div>
+                
+
+                <!-- Include the JavaScript code specific to this slideshow -->
+                <script>let slideIndex2 = 1;
+                    showSlides(slideIndex2, 'slideshow2');
+
+                    // Next/previous controls
+                    function plusSlides2(n, slideshowId) {
+                        showSlides2((slideIndex2 += n), slideshowId);
+                    }
+
+                    // Thumbnail image controls
+                    function currentSlide2(n, slideshowId) {
+                        showSlides2((slideIndex2 = n), slideshowId);
+                    }
+
+                    function showSlides2(n, slideshowId) {
+                        let i;
+                        let slides2 = document.querySelectorAll(`#${slideshowId} .mySlides`);
+                        let dots2 = document.querySelectorAll(`#${slideshowId} .dot`);
+                        if (n > slides2.length) {
+                            slideIndex2 = 1;
+                        }
+                        if (n < 1) {
+                            slideIndex2 = slides2.length;
+                        }
+                        for (i = 0; i < slides2.length; i++) {
+                            slides2[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots2.length; i++) {
+                            dots2[i].className = dots2[i].className.replace(" active", "");
+                        }
+                        slides2[slideIndex2 - 1].style.display = "block";
+                        dots2[slideIndex2 - 1].className += " active";
+                    }</script>
+
+                <a href="https://airbnb.com/h/hccapt1">
+                    <div class="locations-col">
+                        <h2 style="color: #C07860;">HCC Apt #1 near Hatfield Mccoy Ivy Branch</h2>
+                        <h3 style="color: #C07860;">12 guests, 4 bedroom, 8 beds, 1 bathroom</h3>
+                        <div class="layer"></div>
+                    </div>
+                </a>
+
+            </td>
+        </tr>
+    </table>
+    <table border="0" cellspacing="10" cellpadding="0" style="width: 75%">
+        <tr>
+            <td>
+                <div class="slideshow-container" id="slideshow3">
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="images/image7.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="images/image8.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="images/image9.jpg" style="width:100%">
+                    </div>
+                </div>
+                <br>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1, 'slideshow3')"></span>
+                    <span class="dot" onclick="currentSlide(2, 'slideshow3')"></span>
+                    <span class="dot" onclick="currentSlide(3, 'slideshow3')"></span>
+                </div>
+
+
+                <!-- Include the JavaScript code specific to this slideshow -->
+                <script>let slideIndex3 = 1;
+                    showSlides3(slideIndex3, 'slideshow3');
+
+                    // Next/previous controls
+                    function plusSlides3(n, slideshowId) {
+                        showSlides3((slideIndex3 += n), slideshowId);
+                    }
+
+                    // Thumbnail image controls
+                    function currentSlide3(n, slideshowId) {
+                        showSlides3((slideIndex3 = n), slideshowId);
+                    }
+
+                    function showSlides3(n, slideshowId) {
+                        let i;
+                        let slides3 = document.querySelectorAll(`#${slideshowId} .mySlides`);
+                        let dots3 = document.querySelectorAll(`#${slideshowId} .dot`);
+                        if (n > slides3.length) {
+                            slideIndex3 = 1;
+                        }
+                        if (n < 1) {
+                            slideIndex3 = slides3.length;
+                        }
+                        for (i = 0; i < slides3.length; i++) {
+                            slides3[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots3.length; i++) {
+                            dots3[i].className = dots3[i].className.replace(" active", "");
+                        }
+                        slides3[slideIndex3 - 1].style.display = "block";
+                        dots3[slideIndex3 - 1].className += " active";
+                    }</script>
+
+
+
+
+
+                <a href="https://airbnb.com/h/hccapt2">
+                    <div class="locations-col">
+                        <h2 style="color: #C07860;">HCC Apt 2 Near Hatfield McCoy Ivy Branch</h2>
+                        <h3 style="color: #C07860;">7 guests, 2 bedrooms, 3 beds, 1 bathroom</h3>
+                        <div class="layer"></div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+    </table>
+    <style>
+        .table-container {
+            text-align: center;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto; /* Esto centra horizontalmente la tabla */
+        }
+
+            table td {
+                text-align: center; /* Esto centra el texto dentro de las celdas */
+            }
+    </style>
+
+    <table border="0" cellspacing="10" cellpadding="0" style="width: 100%">
+        <tr>
+            <td>
+
+                <!-- Slideshow container -->
+                <div class="slideshow-container" id="slideshow4">
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="images/image10.jpg" style="width:350px">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="images/image11.jpg" style="width:350px">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="images/image12.jpg" style="width:350px">
+                    </div>
+                </div>
+                <br>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide4(1, 'slideshow4')"></span>
+                    <span class="dot" onclick="currentSlide4(2, 'slideshow4')"></span>
+                    <span class="dot" onclick="currentSlide4(3, 'slideshow4')"></span>
+                </div>
+
+                <!-- Include the JavaScript code specific to this slideshow -->
+                <script>let slideIndex4 = 1;
+
+                    showSlides4(slideIndex4, 'slideshow4');
+
+                    // Next/previous controls
+                    function plusSlides4(n, slideshowId) {
+                        showSlides4((slideIndex4 += n), slideshowId);
+                    }
+
+                    // Thumbnail image controls
+                    function currentSlide4(n, slideshowId) {
+                        showSlides4((slideIndex4 = n), slideshowId);
+                    }
+
+                    function showSlides4(n, slideshowId) {
+                        let i;
+                        let slides4 = document.querySelectorAll(`#${slideshowId} .mySlides`);
+                        let dots4 = document.querySelectorAll(`#${slideshowId} .dot`);
+                        if (n > slides4.length) {
+                            slideIndex4 = 1;
+                        }
+                        if (n < 1) {
+                            slideIndex4 = slides4.length;
+                        }
+                        for (i = 0; i < slides4.length; i++) {
+                            slides4[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots4.length; i++) {
+                            dots4[i].className = dots4[i].className.replace(" active", "");
+                        }
+                        slides4[slideIndex4 - 1].style.display = "block";
+                        dots4[slideIndex4 - 1].className += " active";
+                    }</script>
+
+                <a href="https://airbnb.com/h/hcccamp1">
+                    <div class="locations-col">
+                        <h2 style="color: #C07860;">Horse Creek Cabins - Camper 1</h2>
+                        <h3 style="color: #C07860;">4 guests · 1 bedroom · 1 bed · 1 bath</h3>
+                        <div class="layer"></div>
+                    </div>
+                </a>
+
+            </td>
+
+            <td>
+            <td>
+                <!-- Slideshow container -->
+                <!-- Slideshow container -->
+                <div class="slideshow-container" id="slideshow5">
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="images/Image13.jpg" style="width:350px">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="images/image14.jpg" style="width:350px">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="images/image15.jpg" style="width:350px">
+                    </div>
+                </div>
+                <br>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide5(1, 'slideshow5')"></span>
+                    <span class="dot" onclick="currentSlide5(2, 'slideshow5')"></span>
+                    <span class="dot" onclick="currentSlide5(3, 'slideshow5')"></span>
+                </div>
+
+                <!-- Include the JavaScript code specific to this slideshow -->
+                <script>let slideIndex5 = 1;
+
+                    showSlides5(slideIndex5, 'slideshow5');
+
+                    // Next/previous controls
+                    function plusSlides5(n, slideshowId) {
+                        showSlides5((slideIndex5 += n), slideshowId);
+                    }
+
+                    // Thumbnail image controls
+                    function currentSlide5(n, slideshowId) {
+                        showSlides5((slideIndex5 = n), slideshowId);
+                    }
+
+                    function showSlides5(n, slideshowId) {
+                        let i;
+                        let slides5 = document.querySelectorAll(`#${slideshowId} .mySlides`);
+                        let dots5 = document.querySelectorAll(`#${slideshowId} .dot`);
+                        if (n > slides5.length) {
+                            slideIndex5 = 1;
+                        }
+                        if (n < 1) {
+                            slideIndex5 = slides5.length;
+                        }
+                        for (i = 0; i < slides5.length; i++) {
+                            slides5[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots5.length; i++) {
+                            dots5[i].className = dots5[i].className.replace(" active", "");
+                        }
+                        slides5[slideIndex5 - 1].style.display = "block";
+                        dots5[slideIndex5 - 1].className += " active";
+                    }</script>
+
+
+                <a href="https://airbnb.com/h/hcccamp2">
+                    <div class="locations-col">
+                        <h2 style="color: #C07860;">Horse Creek Cabins - Camper 2</h2>
+                        <h3 style="color: #C07860;">4 guests · 1 bedroom · 1 bed · 1 bath</h3>
+                        <div class="layer"></div>
+                    </div>
+                </a>
+            </td>
+        </tr>
+    </table>
+
+
+    <!--------------->
+    <!------Javascript for Toggle Menu------->
+    <script>var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }</script>
+</body>
+</html>
+

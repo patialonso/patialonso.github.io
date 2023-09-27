@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!---utf-8 is unicode encoding used in websites--->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1">
+    <title>
+        Horse Creek Cabins
+    </title>
+    <!---links the html document to the css style-->
+    <link rel="stylesheet" href="style.css">
+    <!--links to google's fonts. Can choose fonts and create link from Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <!---links to a website with free icons. Google search font awesome icons-->
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="icon" href="images/hcclogo.jpg">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/horsecreekcabins1.jpg"></a>
+            <div class="nav-links" id="navLinks">
+                <! This is the closing icon for mobile>
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="https://www.airbnb.com/h/horsecreekcabins">CABINS AND RV PARKING</a></li>
+                    <li><a href="nearbyattractions.html">NEARBY ATTRACTIONS</a></li>
+                    <li><a href="dining-and-shopping.html">DINING AND SHOPPING</a></li>
+                    <li><a href="PhotoGallery.html">PHOTO GALLERY</a></li>
+                    <li><a href="Events.html">EVENTS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+
+        <div class="text-box">
+            <h1>Coming Soon!</h1>
+            <p>
+                This part of the website is still under construction.
+            </p>
+            <a href="https://www.airbnb.com/h/horsecreekcabins" class="hero-btn">Book Now!</a>
+        </div>
+    </section>

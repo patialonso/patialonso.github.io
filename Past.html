@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!---utf-8 is unicode encoding used in websites--->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1">
+    <title>
+        Horse Creek Cabins
+    </title>
+    <!---links the html document to the css style-->
+    <link rel="stylesheet" href="style.css">
+    <!--links to google's fonts. Can choose fonts and create link from Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <!---links to a website with free icons. Google search font awesome icons-->
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="icon" href="images/hcclogo.jpg">
+</head>
+
+<body>
+    <section class="smallheader">
+        <nav>
+            <a href="index.html"><img src="images/horsecreekcabins1.jpg"></a>
+            <div class="nav-links" id="navLinks">
+                <! This is the closing icon for mobile>
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="cabins.html">CABINS AND RV PARKING</a></li>
+                    <li><a href="nearbyattractions.html">NEARBY ATTRACTIONS</a></li>
+                    <li><a href="dining-and-shopping.html">DINING AND SHOPPING</a></li>
+                    <li><a href="PhotoGallery.html">PHOTO GALLERY</a></li>
+                    <li class="dropdown">
+                        <!input type="checkbox" class="dropdown-toggle">
+                        <a href="#" class="dropbtn">EVENTS <i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Events.html">Upcoming</a></li>
+                            <li><a href="Past.html">Past</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+    </section>
+    <section class="welcome" style="color: white;">
+
+        <div class="row">
+            <div class="welcome-col">
+
+                <style>
+                    .table-container {
+                        text-align: center;
+                    }
+
+                    table {
+                        width: 60%; /* Adjust the table width as needed */
+                        margin: 0 auto; /* Center the table horizontally */
+                        border-collapse: collapse; /* Ensure borders collapse for rounded corners */
+                        border-radius: 10px; /* Add rounded corners */
+                        overflow: hidden; /* Hide overflow content */
+                    }
+
+                        table img {
+                            width: 100px; /* Adjust the image width as needed */
+                            height: auto; /* Allow the height to adjust proportionally */
+                        }
+
+                        /* Optional: Reduce spacing between cells */
+                        table td {
+                            padding: 5px;
+                        }
+                    @media screen and (max-width: 600px) {
+                        table {
+                            width: 100%; /* Make the table take up the full width */
+                        }
+
+                            table tr {
+                                display: block; /* Stack table rows vertically */
+                            }
+
+                            table td, table th {
+                                display: block; /* Display table cells as blocks */
+                                width: 100%; /* Take up the full width of the container */
+                                box-sizing: border-box; /* Include padding and border in the width */
+                                text-align: center; /* Left-align text in cells */
+                                margin-bottom: 10px; /* Add some spacing between rows */
+                            }
+                </style>
+                <table border="0" cellspacing="5" cellpadding="5" style="width: 80%; background-color: white; color: #C07860;">
+                    <tr>
+                        <td>
+                            <h2>Past Events</h2>
+                            </br>
+                            <div class="event">
+                                <h3>Event Title 1</h3>
+                                <p>Date: [Insert Date]</p>
+                                <p>Time: [Insert Time]</p>
+                                <p>Location: [Insert Location]</p>
+                                <p>Description: [Insert Event Description]</p>
+                                <img src="placeholder_image1.jpg" alt="Event Image 1" style="width: 100px; height: 100px;">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="event">
+                                <h3>Event Title 2</h3>
+                                <p>Date: [Insert Date]</p>
+                                <p>Time: [Insert Time]</p>
+                                <p>Location: [Insert Location]</p>
+                                <p>Description: [Insert Event Description]</p>
+                                <img src="placeholder_image1.jpg" alt="Event Image 1" style="width: 100px; height: 100px;">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+    </section>
+    </section>
+</html>

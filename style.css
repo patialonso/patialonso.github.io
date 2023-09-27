@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*This links the Google Fonts font that we selected in HTML*/
+    font-family: 'Poppins', sans-serif;
+}
+/*This creates a header (linked from the index file). In it, you can designate the height/width and then add an image*/
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/Cabin2/creek.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+/*Header for the other linked pages*/
+.smallheader {
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/Cabin2/creek.jpeg);
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+/*This is the header for dining and shopping pages*/
+.header2 {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradientfro), #ed9853);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+/*Position of image*/
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content:space-between;
+    align-items: center;
+}
+/*Size of logo image*/
+nav img{
+    width:150px;
+}
+/*Positioning of links*/
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+/*Positioning of text*/
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+/*Make the text color white and change the size of the text*/
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+/*Add an invisible line at the bottom of each menu option*/
+    .nav-links ul li::after {
+        content: '';
+        width: 0%;
+        height: 2px;
+        background: #ed9853;
+        display: block;
+        margin: auto;
+    }
+/*Make line appear when you hover over*/
+.nav-links ul li:hover::after {
+        width: 100%;
+        transition: 0.5s;
+    }
+/*Change the color and placement of the text box on the first page*/
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+/*Paragraph - 10 from top, 40 from bottom, 0 Left/Right*/
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+/*Add a button to link for the book now*/
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+
+}
+
+/*Add a button to link to contact information*/
+.hero-btn1 {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    padding: 4px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+/* What happens when you hover over the button */
+.hero-btn:hover {
+    border: 1px solid #ed9853; /* Lighter orange border on hover */
+    background: #ed9853; /* Lighter orange background on hover */
+    transition: 1s;
+}
+
+/*Hide the mobile stuff we are about to make from desktop*/
+nav .fa{
+    display:none;
+}
+/*Write code for max width 700px. So small screens like mobile*/
+@media(max-width:700px){
+    .text-box h1 {
+        font-size: 20px;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    /*Settings. By using right -200 you hide the menu until opened.*/
+    .nav-links {
+        position: absolute;
+        background: #ed9853;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    /*This is the font awesome site icon*/
+    nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    /*Change the alignment of the links in mobile*/
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+/*Welcome Section*/
+.welcome{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.welcome-col {
+    flex-basis: 31%;
+    background: #C07860;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+.inlineblocks{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(150px auto);
+    grid-gap: 2px;
+    max-width: 300px;
+    margin: 0 auto;
+    align-items: start;
+    justify-items: center;
+}
+
+.shoppingblocks {
+    position: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(150px auto);
+    grid-gap: 2px;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: start;
+    justify-items: center;
+}
+.shoppingblocks1 {
+    position: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(150px auto);
+    grid-gap: 2px;
+    max-width: 100px;
+    margin: auto;
+    padding-right:200px;
+    align-items: center;
+    justify-items: center;
+}
+
+.shoppingblocks2 {
+    position: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(150px auto);
+    grid-gap: 2px;
+    max-width: 100px;
+    margin: auto;
+    padding-right: 200px;
+    align-items: center;
+    justify-items: center;
+}
+
+
+.pics {
+    position: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(150px auto);
+    grid-gap: 2px;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: start;
+    justify-items: center;
+}
+
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+/*Break into a single column on mobile if applicable.*/
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*Two Locations*/
+.locations{
+    width: 25%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.locations-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.locations-col img{
+    width: 25%;
+    display: block;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+
+    .layer:hover {
+        background: rgba(192, 120, 96,0.5);
+    }
+
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0%;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+* {
+    box-sizing: border-box
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+/* Styles for slideshow images */
+.mySlides {
+    display: none;
+}
+
+/* Styles for slideshow navigation dots */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #717171;
+}
+/* Style the dropdown container 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style the dropdown button 
+.dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    cursor: pointer;
+    padding: 14px 16px;
+    display: block;
+    text-align: left;
+}
+    */
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #C07860;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+    /* Style the links inside the dropdown */
+    .dropdown-menu li a {
+        color: black;
+        text-decoration: none;
+        padding: 12px 16px;
+        display: block;
+        text-align: left;
+    }
+
+        /* Change color on hover */
+        .dropdown-menu li a:hover {
+            background-color: #ddd;
+        }
+
+/* Show the dropdown menu when the label is clicked */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
